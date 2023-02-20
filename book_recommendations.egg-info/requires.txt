@@ -4,4 +4,3 @@ Flask
 dill==0.3.5.1
 python-dotenv==0.21.0
 numpy
--e .
