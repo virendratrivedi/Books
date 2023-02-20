@@ -1,6 +1,7 @@
 README.md
 setup.py
 book/__init__.py
+book/config.py
 book/exception.py
 book/logger.py
 book_recommendations.egg-info/PKG-INFO
