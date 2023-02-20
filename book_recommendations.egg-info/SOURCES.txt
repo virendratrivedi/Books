@@ -1,5 +1,8 @@
+README.md
 setup.py
 book/__init__.py
+book/exception.py
+book/logger.py
 book_recommendations.egg-info/PKG-INFO
 book_recommendations.egg-info/SOURCES.txt
 book_recommendations.egg-info/dependency_links.txt

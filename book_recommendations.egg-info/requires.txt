@@ -2,5 +2,7 @@ pymongo==4.2.0
 PyYAML
 Flask
 dill==0.3.5.1
+scikit-learn
 python-dotenv==0.21.0
+pandas==1.5.3
 numpy
