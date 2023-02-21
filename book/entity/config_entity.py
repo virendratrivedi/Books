@@ -28,5 +28,11 @@ class DataIngestionConfig:
             self.feature_store_ratings_file_path=os.path.join(self.data_ingestion_dir,"feature_store",FILE_NAME_RATINGS)
             
         except Exception as e:
-            raise BookException(e, sys)    
+            raise BookException(e, sys)   
+
+    def to_dict(self,)->dict:
+        try:
+            return self.__dict__
+        except Exception  as e:
+            raise BookException(e,sys)      
 

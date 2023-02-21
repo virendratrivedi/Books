@@ -10,8 +10,11 @@ client = pymongo.MongoClient("mongodb+srv://arpit_t:12345@cluster0.ekedees.mongo
 @dataclass
 class EnvirontVariable:
     mongo_db_url:str=os.getenv("MONGO_DB_URL")
+    
+    print("mongo_db_url:",mongo_db_url)
 
 env_var = EnvirontVariable()    
 
-print(env_var.mongo_db_url)
+#print(env_var.mongo_db_url)
 mongo_client = pymongo.MongoClient(env_var.mongo_db_url)
+print("mongo_client",mongo_client)
