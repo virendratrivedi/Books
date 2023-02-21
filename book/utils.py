@@ -20,3 +20,25 @@ def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataF
      
     except Exception as e:
         raise BookException(e, sys)
+    
+
+def save_object(file_path:str,obj:object)-> None:
+    try:
+        logging.info(f"Entered the save object method of MainUtil class")
+        os.makedirs(os.path.dirname(file_path),exist_ok=True)
+        with open(file_path,"wb") as file_obj:
+            dill.dump(obj, file_obj)
+        logging.info(f"Exited the save object method of MainUtil class")    
+
+    except Exception as e:
+        raise BookException(e, sys)        
+
+
+def load_object(file_path:str)->object:
+    try:
+        if not os.path.exists(file_path):
+            raise Exception(f"The file:{file_path} is not exist")
+        with open(file_path,"rb") as file_obj:
+            return dill.load(file_obj)
+    except Exception as e:
+        raise BookException(e, sys)    

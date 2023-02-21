@@ -6,15 +6,18 @@ from datetime import datetime
 FILE_NAME_BOOKS = "books.csv"
 FILE_NAME_USERS = "users.csv"
 FILE_NAME_RATINGS = "ratings.csv"
+RATINGS_WITH_NAMES = "ratings_with_names.csv"
+POPULAR_PKL_FILE= "popular.pkl"
 
 class TrainingPipelineConfig:
     try:
         def __init__(self):
-            self.artifact_dir=os.path.join(os.getcwd(),"artifact",f"{datetime.now().strftime('%m%d%Y__%H%M%S')}")
+            self.artifact_dir=os.path.join(os.getcwd(),"artifacts",f"{datetime.now().strftime('%m%d%Y__%H%M%S')}")
     except Exception as e:
         raise BookException(e, sys)  
     
 class DataIngestionConfig:
+    
     def __init__(self,training_pipeline_config:TrainingPipelineConfig):
         try:
             self.database_name='mylib'
@@ -36,3 +39,13 @@ class DataIngestionConfig:
         except Exception  as e:
             raise BookException(e,sys)      
 
+class DataTransformationConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        try:
+            self.data_transformation_dir=os.path.join(training_pipeline_config.artifact_dir,"data_transformation")
+            self.ratings_with_names_file_path=os.path.join(self.data_transformation_dir,RATINGS_WITH_NAMES)  
+            self.popular_pkl_file_path = os.path.join(self.data_transformation_dir,"pickle_files",POPULAR_PKL_FILE) 
+            
+            
+        except Exception as e:
+            raise BookException(e, sys)

@@ -1,2 +1,0 @@
-[ 2023-02-21 11:48:53,951 ] 19 root - INFO - Exporting collection data as pandas dataframe
-[ 2023-02-21 11:48:53,953 ] 12 root - INFO - Reading data from database mylib and Collecion books

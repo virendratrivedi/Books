@@ -1,0 +1,41 @@
+[ 2023-02-21 14:23:22,905 ] 19 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-02-21 14:23:22,919 ] 11 root - INFO - Reading data from database mylib and Collecion books
+[ 2023-02-21 14:24:15,522 ] 13 root - INFO - Found Column: Index(['_id', 'ISBN', 'Book-Title', 'Book-Author', 'Year-Of-Publication',
+       'Publisher', 'Image-URL-S', 'Image-URL-M', 'Image-URL-L'],
+      dtype='object')
+[ 2023-02-21 14:24:15,645 ] 17 root - INFO - Rows and column in df: (271360, 8)
+[ 2023-02-21 14:24:15,645 ] 11 root - INFO - Reading data from database mylib and Collecion users
+[ 2023-02-21 14:24:24,870 ] 13 root - INFO - Found Column: Index(['_id', 'User-ID', 'Location', 'Age'], dtype='object')
+[ 2023-02-21 14:24:24,908 ] 17 root - INFO - Rows and column in df: (278858, 3)
+[ 2023-02-21 14:24:24,908 ] 11 root - INFO - Reading data from database mylib and Collecion ratings
+[ 2023-02-21 14:25:01,791 ] 13 root - INFO - Found Column: Index(['_id', 'User-ID', 'ISBN', 'Book-Rating'], dtype='object')
+[ 2023-02-21 14:25:01,909 ] 17 root - INFO - Rows and column in df: (1149780, 3)
+[ 2023-02-21 14:25:01,909 ] 27 root - INFO - Save data in feature store
+[ 2023-02-21 14:25:01,909 ] 29 root - INFO - Create feature store folder if not available
+[ 2023-02-21 14:25:01,917 ] 34 root - INFO - Save df to feature store folder
+[ 2023-02-21 14:25:11,313 ] 56 root - INFO - Data ingestion artifact: DataIngestionArtifact(books_file_path='D:\\ML\\vscode\\Books\\artifacts\\02212023__142322\\data_ingestion\\feature_store\\books.csv', users_file_path='D:\\ML\\vscode\\Books\\artifacts\\02212023__142322\\data_ingestion\\feature_store\\users.csv', ratings_file_path='D:\\ML\\vscode\\Books\\artifacts\\02212023__142322\\data_ingestion\\feature_store\\ratings.csv')
+[ 2023-02-21 14:25:11,604 ] 19 root - INFO - Exporting collection data as pandas dataframe
+[ 2023-02-21 14:25:11,604 ] 11 root - INFO - Reading data from database mylib and Collecion books
+[ 2023-02-21 14:25:54,102 ] 13 root - INFO - Found Column: Index(['_id', 'ISBN', 'Book-Title', 'Book-Author', 'Year-Of-Publication',
+       'Publisher', 'Image-URL-S', 'Image-URL-M', 'Image-URL-L'],
+      dtype='object')
+[ 2023-02-21 14:25:54,228 ] 17 root - INFO - Rows and column in df: (271360, 8)
+[ 2023-02-21 14:25:54,228 ] 11 root - INFO - Reading data from database mylib and Collecion users
+[ 2023-02-21 14:26:05,509 ] 13 root - INFO - Found Column: Index(['_id', 'User-ID', 'Location', 'Age'], dtype='object')
+[ 2023-02-21 14:26:05,543 ] 17 root - INFO - Rows and column in df: (278858, 3)
+[ 2023-02-21 14:26:05,545 ] 11 root - INFO - Reading data from database mylib and Collecion ratings
+[ 2023-02-21 14:26:41,092 ] 13 root - INFO - Found Column: Index(['_id', 'User-ID', 'ISBN', 'Book-Rating'], dtype='object')
+[ 2023-02-21 14:26:41,228 ] 17 root - INFO - Rows and column in df: (1149780, 3)
+[ 2023-02-21 14:26:41,229 ] 27 root - INFO - Save data in feature store
+[ 2023-02-21 14:26:41,229 ] 29 root - INFO - Create feature store folder if not available
+[ 2023-02-21 14:26:41,231 ] 34 root - INFO - Save df to feature store folder
+[ 2023-02-21 14:26:50,510 ] 56 root - INFO - Data ingestion artifact: DataIngestionArtifact(books_file_path='D:\\ML\\vscode\\Books\\artifacts\\02212023__142322\\data_ingestion\\feature_store\\books.csv', users_file_path='D:\\ML\\vscode\\Books\\artifacts\\02212023__142322\\data_ingestion\\feature_store\\users.csv', ratings_file_path='D:\\ML\\vscode\\Books\\artifacts\\02212023__142322\\data_ingestion\\feature_store\\ratings.csv')
+[ 2023-02-21 14:26:50,931 ] 26 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Transformation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2023-02-21 14:26:55,019 ] 33 root - INFO - Merging Book and Rating DataFrame
+[ 2023-02-21 14:26:56,070 ] 37 root - INFO - Number of rating In each Books
+[ 2023-02-21 14:26:58,702 ] 42 root - INFO - Average rating In each Books
+[ 2023-02-21 14:26:59,627 ] 47 root - INFO - Mearging num of Rating Dataframe and Average rating DataFrame
+[ 2023-02-21 14:26:59,917 ] 49 root - INFO - Total popular DF Rows and Column:(241071, 3)
+[ 2023-02-21 14:26:59,931 ] 52 root - INFO - New Popular Df Rows and Column:(50, 3)
+[ 2023-02-21 14:27:19,016 ] 27 root - INFO - Entered the save object method of MainUtil class
+[ 2023-02-21 14:27:19,052 ] 31 root - INFO - Exited the save object method of MainUtil class
