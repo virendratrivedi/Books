@@ -8,6 +8,8 @@ FILE_NAME_USERS = "users.csv"
 FILE_NAME_RATINGS = "ratings.csv"
 RATINGS_WITH_NAMES = "ratings_with_names.csv"
 POPULAR_PKL_FILE= "popular.pkl"
+SIMILARITY_SCORE_PKL_FILE="similarity_score.pkl"
+PIVOT_TABLE_pkl_FILE="pivot_table.pkl"
 
 class TrainingPipelineConfig:
     try:
@@ -49,3 +51,14 @@ class DataTransformationConfig:
             
         except Exception as e:
             raise BookException(e, sys)
+        
+class ModelTrainingConfig:
+    try:
+        def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+            self.model_train_dir=os.path.join(training_pipeline_config.artifact_dir,"model_training")
+            self.similarity_score_pkl_file_path=os.path.join(self.model_train_dir,SIMILARITY_SCORE_PKL_FILE)  
+            self.pivot_table_pkl_file_path = os.path.join(self.model_train_dir,PIVOT_TABLE_pkl_FILE)
+
+            
+    except Exception as e:
+        raise BookException(e, sys)        

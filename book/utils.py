@@ -39,6 +39,7 @@ def load_object(file_path:str)->object:
         if not os.path.exists(file_path):
             raise Exception(f"The file:{file_path} is not exist")
         with open(file_path,"rb") as file_obj:
+            print("file_obj",file_obj)
             return dill.load(file_obj)
     except Exception as e:
         raise BookException(e, sys)    
